@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: myselfdeployment
+  labels:
+    app: myself
+spec:
+  replicas: 3 
+  selector:
+    matchLabels:
+      app: myself
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1 
+      maxSurge: 2 
+  template:
+    metadata: 
+      name: myself_pod
+      labels: 
+        app: myself
+    spec:
+      containers:
+        - image: myself
+          name: myselfobject
+          ports:
+            - containerPort: 80

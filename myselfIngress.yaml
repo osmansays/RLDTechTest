@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: myselfingress
+spec:
+  rules:
+  - host: myself.com
+    http:
+      paths: 
+      - path: /myself
+        backend:
+          serviceName: myselfservice
+          servicePort: 80

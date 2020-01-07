@@ -1,0 +1,7 @@
+git init 
+git config --global user.email "osmansays@gmail.com" 
+git remote add origin https://github.com/osmansays/RLDTechTest
+git add .
+git commit -m "uploading dockefile , json object files "
+git push origin
+git push origin master
