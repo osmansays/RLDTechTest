@@ -22,6 +22,7 @@ spec:
     spec:
       containers:
         - image: myself
+          imagePullPolicy: Never
           name: myselfobject
           ports:
             - containerPort: 80
