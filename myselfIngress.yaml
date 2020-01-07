@@ -7,7 +7,7 @@ spec:
   - host: myself.com
     http:
       paths: 
-      - path: /myself
+      - path: /
         backend:
           serviceName: myselfservice
           servicePort: 80
