@@ -3,12 +3,12 @@ kind: Deployment
 metadata:
   name: myselfdeployment
   labels:
-    app: myself
+    app: myselfapp
 spec:
   replicas: 3 
   selector:
     matchLabels:
-      app: myself
+      app: myselfapp
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -18,7 +18,7 @@ spec:
     metadata: 
       name: myself_pod
       labels: 
-        app: myself
+        app: myselfapp
     spec:
       containers:
         - image: myself
